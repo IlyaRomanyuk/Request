@@ -1,0 +1,160 @@
+@import './../mixins/a-panorama.scss';
+
+.panorama {
+    padding-top: 150px;
+    padding-bottom: 220px;
+    text-align: center;
+
+    @media(max-width: 767px) {
+        padding-top: 130px;
+    }
+
+    &__title {
+        color: $black;
+        font-size: 2.5rem;
+        font-weight: 600;
+
+        @media(max-width: 767px) {
+            font-size: 3.125rem;
+        }
+    }
+
+    &__text {
+        margin: 0;
+        text-align: center;
+
+        max-width: 660px;
+        width: 100%;
+
+        margin: 30px auto 0px;
+        padding-bottom: 60px; 
+
+        @media(max-width: 767px) {
+            font-size: 1.875rem;
+        }
+    }
+
+    &__list, &__list2 {
+        display: flex;
+
+        @media(max-width: 767px) {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+
+    &__list2-block {
+        width: 55%;
+
+        @media(max-width: 767px) {
+            width: 100%;
+        }
+    }
+    
+    &__item1 {
+        @include a-panorama-position(flex, 55%, 465px, 30px, 0 10px 10px 0, #282828, 420px, 100%, 0 0 340px -240px);
+        @media(max-width: 767px) {
+            width: 100%;
+            height: 458px;
+        }
+    }
+
+    &__item2 {
+        @include a-panorama-position(flex, 22.5%, auto, 30px, 0 10px 10px 0, $white, 87px, 100%, 0);
+
+        @media(max-width: 767px) {
+            width: 100%;
+            height: 458px;
+
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+            &-img {
+                order: 5;
+                max-width: 150px 
+            }
+        }
+
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    &__item3 {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        
+        @include a-panorama-position(flex, 45%, auto, 30px, 0 10px 0 0, $white, auto, auto, 0 0 -300px 0);
+
+        @media(max-width: 767px) {
+            width: 100%;
+            height: 458px;
+
+            margin-bottom: 10px;
+
+            flex-direction: row;
+
+            &-img {
+                margin-right: -170px;
+            }
+        }
+    }
+
+    &__item4 {
+        @include a-panorama-position(flex, 100%, 419px, 30px, 0 0 10px 0, #282828, 420px, 100%, 0 0 340px -240px);
+    }
+
+    &__item5 {
+        @include a-panorama-position(flex, 100%, 366px, 30px, 0, $white, auto, auto, 0 0 0 0);
+
+        @media(max-width: 767px) {
+          &-img {
+              margin-right: -120px;
+          }
+        }
+    }
+
+
+    &__info1 {
+        margin: auto 0;
+        margin-left: 70px;
+        @include a-panorama-info(left, 1.25rem, $white, 1.875rem, $white, 600, 303px, 100%, 30px, #777);
+    }
+
+    &__info2 {
+        @include a-panorama-info(center, 1.25rem, $black, 1.875rem, $black, 600, 303px, 100%, 30px, #777);
+
+        @media(max-width: 767px) {
+            text-align: left;
+        }
+    }
+
+    &__info3 {
+        @include a-panorama-info(center, 1.25rem, $black, 1.875rem, $black, 600, 303px, 100%, 30px auto 0, #777);
+        @media(max-width: 767px) {
+            text-align: left;
+            margin-right: 15px;
+        }
+    }
+
+    &__info4 {
+        margin: auto 0;
+        margin-left: 70px;
+        @include a-panorama-info(left, 1.25rem, $white, 1.875rem, $white, 600, 303px, 100%, 30px, #777);
+    }
+
+    &__info5 {
+        margin-top: 90px;
+        @include a-panorama-info(left, 1.25rem, $black, 1.875rem, $black, 600, 303px, 100%, 30px, #777);
+        @media(max-width: 767px) {
+            margin-top: 0;
+        }
+    }
+}

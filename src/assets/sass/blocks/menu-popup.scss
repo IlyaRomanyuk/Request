@@ -1,0 +1,151 @@
+@import './../mixins/a-link.scss';
+
+.menu-popup {
+    display: none;
+
+    position: absolute;
+    left: 0;
+    top: 103px;
+    z-index: 2;
+    
+    max-width: 1168px;
+    width: 100%;
+
+    background-color: $white;
+
+    &__content {
+        display: flex;
+    }
+
+    &__brands {
+        max-width: 328px;
+        width: 100%;
+        padding-top: 40px;
+
+        background-color: #f7f7f7;
+
+        ul {
+            list-style: none;
+
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+
+            border-bottom: 1px solid #eee; 
+
+            &:last-child {
+                border: none;
+            }
+
+            li {
+                padding-left: 30px;
+
+                a {
+                    text-decoration: none;
+                }
+            }
+
+            span {
+                font-size: 1.125rem;
+                color: #777;
+                line-height: 1.6;
+
+                padding-left: 30px;
+            }
+        }
+
+        &-title {
+            a {
+                @include a-link(1.125rem, $black, 2.2);
+            }     
+        }
+
+        &-brand {
+            a {
+                @include a-link(1.5rem, #333, 1.25);
+
+                transition: color .2s ease-in;
+
+                &:hover {
+                    color: $orange;
+                    transition: color .2s ease-in;
+                }
+            }
+        }
+
+        &-countries {
+            li {
+                display: flex;
+                align-items: center;
+
+                img {
+                    margin-right: 5px;
+                }
+            }
+
+            a {
+                @include a-link(1.125rem, #333, 1.6);    
+            }
+        }
+    }
+
+    &__preview {
+        max-width: 441px;
+        width: 100%;
+
+        background-color: $green;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &-content {
+            text-align: center;
+        }
+
+        &-title {
+            @include a-link(1.5rem, $white, auto);
+            margin-bottom: 20px;
+        }
+
+        &-link {
+            text-decoration: none;
+
+            padding: 10px 26px;
+
+            color: $white;
+            background-color: $orange;
+            font-size: 18px;
+            
+            border-radius: 5px;
+        }
+
+        &-image {
+            margin-bottom: 44px;
+            img {
+                width: 100%;
+                display: block;
+            }
+        }
+    }
+
+
+
+}
+
+.info__menu--width {
+    max-width: 399px;
+    width: 100%;
+    padding-top: 0; 
+
+    li {
+        padding-left: 88px
+    }
+
+    ul {
+        border-right: 1px solid #f1f1f1;
+    }
+}
+
+.menu-popup-active {
+    display: block;
+}

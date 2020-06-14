@@ -1,0 +1,27 @@
+.logo {
+
+    margin-right: 20px;
+
+    &__link { 
+        display: flex;
+        align-items: center;
+
+        text-decoration: none;
+    }
+
+    &__title {
+        margin-left: 8px;
+
+        font-size: 2rem;
+        color: $title;
+        font-weight: 600;
+    }
+
+    &__subtitle {
+        margin-left: 8px;
+
+        font-size: 18px;
+        color: #777777;
+    }
+
+}

@@ -1,0 +1,135 @@
+.specials {
+    padding: 21px 0;
+
+    display: flex;
+    justify-content: space-between;
+
+    @media(max-width: 767px) {
+        flex-direction: column;
+    }
+
+    &__info {
+        background-color: $white;
+        width: 69%;
+
+        &-title {
+            color: $black;
+            font-size: 1.5rem;
+
+            padding: 20px 0 20px 28px;
+
+            border-bottom: 1px solid #e8e8e8;
+        }
+
+        @media(max-width: 767px) {
+            width: 100%;
+            margin-bottom: 30px;
+        }
+    }
+
+    &__inner{
+        display: flex;
+        justify-content: space-between;
+
+        @media(max-width: 767px) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            //justify-content: center;
+        }
+    }
+
+    &__item {
+        border-right: 1px solid #e8e8e8;
+
+        padding: 56px 0;
+        width: 33.3%;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+
+        @media(max-width: 767px) {
+            width: 100%;
+        }
+
+        @media(max-width: 870px) {
+            padding: 56px 5px
+        }
+
+        &:last-child {
+            border-right: none;
+        }
+
+        &-title {
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        &-cost {
+            margin-bottom: 17px;
+        }
+
+        &-description {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            @media(max-width: 767px) {
+                display: flex;
+                flex-direction: row;
+            }
+
+            div {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+
+                @media(max-width: 767px) {
+                    margin-left: 50px;
+                    align-items: flex-start
+                }
+            }
+
+            img {
+                display: block;
+            }
+        }
+    }
+
+    &__slider {
+        width: 29.4%;
+
+        @media(max-width: 767px) {
+            width: 100%;
+        }
+
+        .swiper-container {
+            width: 100%;
+        }
+        .swiper-slide {
+            position: relative;
+            img{
+                position: absolute;
+                left: 0;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                z-index: 1;
+
+                @media(max-width: 767px) {
+                    width: 100%;
+                }
+            }
+            &__info {
+                position: absolute;
+                z-index: 2;
+            }
+        }
+    }
+}
+

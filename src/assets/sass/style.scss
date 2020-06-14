@@ -1,0 +1,100 @@
+@font-face {
+    font-family: "MyriadPro-LightSemiExt";
+    src: url("../fonts/Myriad/Myriad-Pro-Light-SemiExtended31641.eot"); /* IE9 Compat Modes */
+    src: url("../fonts/Myriad/Myriad-Pro-Light-SemiExtended31641.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+      url("../fonts/Myriad/Myriad-Pro-Light-SemiExtended31641.otf") format("opentype"), /* Open Type Font */
+      url("../fonts/Myriad/Myriad-Pro-Light-SemiExtended31641.svg") format("svg"), /* Legacy iOS */
+      url("../fonts/Myriad/Myriad-Pro-Light-SemiExtended31641.ttf") format("truetype"), /* Safari, Android, iOS */
+      url("../fonts/Myriad/Myriad-Pro-Light-SemiExtended31641.woff") format("woff"), /* Modern Browsers */
+      url("../fonts/Myriad/Myriad-Pro-Light-SemiExtended31641.woff2") format("woff2"); /* Modern Browsers */
+    font-weight: normal;
+    font-style: normal;
+  }
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 16px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+    font-size: 0;
+    font-weight: 400;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+
+    margin: 0;
+
+    font-size: 1rem;
+    font-family: "MyriadPro-LightSemiExt";
+    font-weight: 400;
+}
+
+.overlay, .small-overlay, .middle-overlay {
+    display: none;
+
+    position: absolute;
+    z-index: 4;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    background-color: rgba(0, 0, 0, .7);
+}
+
+.middle-overlay {
+    z-index: 3;
+    
+}
+
+.small-overlay {
+    z-index: 2;
+}
+
+.small-overlay-active, .overlay-active, .middle-overlay-active {
+    display: block;
+}
+/* Blocks */
+@import 'blocks/variables';
+@import 'blocks/header';
+@import 'blocks/container';
+@import 'blocks/small-container';
+@import 'blocks/nav';
+@import 'blocks/logo';
+@import 'blocks/search';
+@import 'blocks/cart';
+@import 'blocks/info';
+@import 'blocks/section';
+@import 'blocks/slider';
+@import 'blocks/banner';
+@import 'blocks/specials';
+@import 'blocks/news';
+@import 'blocks/panorama';
+@import 'blocks/offer';
+@import 'blocks/clients';
+@import 'blocks/contacts';
+@import 'blocks/footer';
+
+/*JS*/
+
+@import 'blocks/telephone-popup';
+@import 'blocks/form';
+
+/*hover menu*/
+
+@import 'blocks/menu-popup';
+

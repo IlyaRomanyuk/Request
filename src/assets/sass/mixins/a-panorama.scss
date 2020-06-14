@@ -1,0 +1,50 @@
+@mixin a-panorama-position($display, $width, $height, $padding, $margin, $backColor, 
+$maxWidth, $widthBlockImg, $marginBlockImg) {
+
+    display: $display;
+
+    width: $width;
+    height: $height;
+    padding: $padding;
+    margin: $margin;
+
+    background-color: $backColor;
+    text-decoration: none;
+
+    overflow: hidden;
+
+
+    &-img{
+        max-width: $maxWidth;
+        width: $widthBlockImg;
+        margin: $marginBlockImg;
+
+        img {
+            width: 100%
+        }
+    }
+}
+
+@mixin a-panorama-info($textAlign, $fzSubtitle, $colorSubtitle, $fzTitle, 
+$colorTitle, $fontWeight, $maxWidth, $width, $marginTop, $colorText) {
+    text-align: $textAlign;
+
+        &-subtitle {
+            font-size: $fzSubtitle;
+            color: $colorSubtitle;
+        } 
+
+        &-title {
+            font-size: $fzTitle;
+            color: $colorTitle;
+            font-weight: $fontWeight;
+        }
+
+        &-text {
+            max-width: $maxWidth;
+            width: $width;
+            margin-top: $marginTop;
+
+            color: $colorText;
+        }
+}
